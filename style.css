@@ -1,249 +1,349 @@
+/* =========================
+   Global Styles
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin: 0;
+  background-color: #f4f7f8;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Navigation Bar */
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* =========================
+   Navigation Bar
+========================= */
+nav {
+  width: 100%;
+  background-color: #1f2937;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
 #home {
-  background-color: #7600bc;
-  padding: 20px 0;
-  margin: 0;
-}
-
-.topmenu {
-  color: lightgray;
-  margin: 10px;
-  padding: 10px;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.topmenu:hover {
-  color: white;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.topdiv {
-  float: right;
-  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .profile_name {
-  float: left;
-  padding-left: 40px;
-  color: lightblue;
-  font-size: 28px;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
-.profile_name .contact_info {
-  font-size: 14px;
-  font-style: italic;
+.contact_info {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.topdiv {
   display: flex;
-  align-items: center;
+  gap: 20px;
 }
 
-/* Titles */
-
-h2 {
-  font-size: 45px;
-  text-align: center;
-  color: #7600bc;
-  margin-top: 40px;
+.topmenu {
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background 0.3s, color 0.3s;
 }
 
-.introduction {
-  font-size: 28px;
-  text-align: center;
-  margin-top: 30px;
+.topmenu:hover {
+  background-color: #2563eb;
+  border-radius: 5px;
 }
 
-/* Layout */
-
+/* =========================
+   About Me Section
+========================= */
 .container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 40px;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: #e5e7eb;
 }
-
-/* About Me */
-
-#about-me h1 {
-  font-size: 60px;
-  color: #7600bc;
-}
-
-#about-me p {
-  font-size: 22px;
-  color: gray;
-  max-width: 600px;
-}
-
-/* Profile Image */
 
 .profile_image {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  border: 5px solid #1f2937;
   object-fit: cover;
-  margin-right: 40px;
 }
 
-/* Skills */
+.container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.container h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.container p {
+  max-width: 600px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* =========================
+   Skills Section
+========================= */
+#skills {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9fafb;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
 
 .all_skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
 }
 
 .skill {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  text-align: center;
-  margin: 20px;
-  padding: 20px;
-  width: 180px;
-  font-size: 18px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  width: 150px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
 }
 
 .skill h6 {
-  font-size: 20px;
-  margin: 10px 0;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #1f2937;
 }
 
 .skill p {
-  font-size: 15px;
-  color: gray;
+  font-size: 0.9rem;
+  color: #6b7280;
 }
 
-/* Projects */
+/* =========================
+   Projects Section
+========================= */
+.projects {
+  padding: 60px 20px;
+  background-color: #e5e7eb;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
 
 .projects-container {
-  margin: 40px auto;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .project-card {
-  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
 .project-card h3 {
-  font-size: 24px;
+  margin-bottom: 10px;
+  color: #1f2937;
 }
 
-.project-card li {
-  font-size: 18px;
+.project-card ul li {
+  margin-left: 20px;
+  color: #4b5563;
 }
 
-.projects-container hr {
-  border: 1px solid #ddd;
-  margin: 30px 0;
+/* =========================
+   Recommendations Section
+========================= */
+#recommendations {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+  text-align: center;
 }
 
-/* Recommendations */
-
-.all_recommendations {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+#recommendations h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
 }
 
 .recommendation {
+  background-color: #fff;
+  padding: 20px 25px;
+  margin: 10px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   font-style: italic;
-  width: 300px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin: 15px;
-  border: 1px solid #ddd;
-  font-size: 18px;
+  color: #1f2937;
 }
 
-.recommendation span {
-  color: #7600bc;
-  font-size: 22px;
-}
-
-/* Scroll to Top Button */
-
-.iconbutton {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #7600bc;
-  color: white;
+/* =========================
+   Recommendation Form
+========================= */
+#contact {
+  padding: 60px 20px;
+  background-color: #e5e7eb;
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-  cursor: pointer;
 }
-
-/* Form */
 
 .flex_center {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 fieldset {
-  padding: 25px;
-  width: 50%;
-  border: 1px solid #ddd;
+  border: 2px solid #1f2937;
+  border-radius: 12px;
+  padding: 30px;
+  background-color: #fff;
+  max-width: 500px;
+  width: 100%;
 }
 
-/* Inputs */
+legend.introduction {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1f2937;
+  padding: 0 10px;
+}
 
 input, textarea {
-  font-family: inherit;
-  margin: 10px 0;
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
 }
 
-/* Buttons */
-
 button {
-  background-color: white;
-  border: 1px solid #7600bc;
-  color: #7600bc;
-  border-radius: 6px;
-  padding: 10px;
-  width: 150px;
-  font-size: 18px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1f2937;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #7600bc;
-  color: white;
-  cursor: pointer;
+  background-color: #2563eb;
 }
 
-/* Popup */
-
-.popup {
-  width: 400px;
-  background-color: #e8bcf0;
-  border-radius: 10px;
+/* =========================
+   Back to Top Button
+========================= */
+.iconbutton {
   text-align: center;
+  margin: 40px 0;
+}
+
+.iconbutton a {
+  color: #1f2937;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #1f2937;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.iconbutton a:hover {
+  background-color: #1f2937;
+  color: #fff;
+}
+
+/* =========================
+   Popup
+========================= */
+.popup {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  visibility: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  padding: 40px;
+  text-align: center;
+  z-index: 10000;
+}
+
+.popup h3 {
+  margin-bottom: 20px;
 }
 
 .popup button {
-  margin: 20px auto;
+  background-color: #2563eb;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topdiv {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .all_skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-container {
+    width: 90%;
+  }
 }
 
