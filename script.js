@@ -1,4 +1,4 @@
-```javascript
+
 function addRecommendation() {
 
   const recommendationText = document.getElementById("new_recommendation").value.trim();
@@ -39,4 +39,4 @@ function showPopup(show) {
   }
 
 }
-```
+
